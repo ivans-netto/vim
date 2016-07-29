@@ -3,7 +3,7 @@
 
 
 
-## BASICS
+### BASICS
 **:e** filename	Open filename for edition
 **:w**	Save file
 :q	Exit Vim
@@ -13,7 +13,7 @@
 .	Repeats the last change made in normal mode
 5.	Repeats 5 times the last change made in normal mode
 
-## MOVING IN THE FILE
+### MOVING IN THE FILE
 k or Up Arrow	move the cursor up one line
 j or Down Arrow	move the cursor down one line
 e	move the cursor to the end of the word
@@ -28,7 +28,7 @@ L	move the cursor to the bottom of the screen
 [[	Jump to function start
 [{	Jump to block start
 
-## CUT, COPY & PASTE
+### CUT, COPY & PASTE
 y	Copy the selected text to clipboard
 p	Paste clipboard contents
 dd	Cut current line
@@ -36,7 +36,7 @@ yy	Copy current line
 y$	Copy to end of line
 D	Cut to end of line
 
-## TEXT INDENT
+### TEXT INDENT
 :set autoindent	Turn on auto-indent
 :set smartindent	Turn on intelligent auto-indent
 :set shiftwidth=4	Defines 4 spaces as indent size
@@ -46,7 +46,7 @@ ctrl-t, ctrl-d	Indent/un-indent in insert mode
 =%	Indent the code between parenthesis
 1GVG=	Indent the whole file
 
-## SEARCH
+### SEARCH
 /word	Search word from top to bottom
 ?word	Search word from bottom to top
 *	Search the word under cursor
@@ -63,7 +63,7 @@ ctrl-t, ctrl-d	Indent/un-indent in insert mode
 :bufdo /searchstr/	Search in all open files
 bufdo %s/something/somethingelse/g	Search something in all the open buffers and replace it with somethingelse
 
-## REPLACE
+### REPLACE
 :%s/old/new/g	Replace all occurences of old by new in file
 :%s/onward/forward/gi	Replace onward by forward, case unsensitive
 :%s/old/new/gc	Replace all occurences with confirmation
@@ -86,7 +86,7 @@ Ctrl+a	Increment number under the cursor
 Ctrl+x	Decrement number under cursor
 ggVGg?	Change text to Rot13
 
-## CASE
+### CASE
 Vu	Lowercase line
 VU	Uppercase line
 g~~	Invert case
@@ -101,13 +101,13 @@ gggUG	Set all text to uppercase
 :%s/.*/\u&	Sets first letter of each line to uppercase
 :%s/.*/\l&	Sets first letter of each line to lowercase
 
-## READ/WRITE FILES
+### READ/WRITE FILES
 :1,10 w outfile	Saves lines 1 to 10 in outfile
 :1,10 w >> outfile	Appends lines 1 to 10 to outfile
 :r infile	Insert the content of infile
 :23r infile	Insert the content of infile under line 23
 
-## FILE EXPLORER
+### FILE EXPLORER
 :e .	Open integrated file explorer
 :Sex	Split window and open integrated file explorer
 :Sex!	Same as :Sex but split window vertically
@@ -119,18 +119,18 @@ gggUG	Set all text to uppercase
 :grep expression *.php	Returns a list of .php files contening expression
 gf	Open file name under cursor
 
-## INTERACT WITH UNIX
+### INTERACT WITH UNIX
 :!pwd	Execute the pwd unix command, then returns to Vi
 !!pwd	Execute the pwd unix command and insert output in file
 :sh	Temporary returns to Unix
 $exit	Retourns to Vi
 
-## ALIGNMENT
+### ALIGNMENT
 :%!fmt	Align all lines
 !}fmt	Align all lines at the current position
 5!!fmt	Align the next 5 lines
 
-## TABS/WINDOWS
+### TABS/WINDOWS
 :tabnew	Creates a new tab
 gt	Show next tab
 :tabfirst	Show first tab
@@ -140,7 +140,7 @@ gt	Show next tab
 :tab ball	Puts all open files in tabs
 :new abc.txt	Edit abc.txt in new window
 
-## WINDOW SPLITING
+### WINDOW SPLITING
 :e filename	Edit filename in current window
 :split filename	Split the window and open filename
 ctrl-w up arrow	Puts cursor in top window
@@ -155,21 +155,21 @@ ctrl-w=	Gives the same size to all windows
 :­nly	Close all windows, excepted current
 :b 2	Open #2 in this window
 
-## AUTO-COMPLETION
+### AUTO-COMPLETION
 Ctrl+n Ctrl+p (in insert mode)	Complete word
 Ctrl+x Ctrl+l	Complete line
 :set dictionary=dict	Define dict as a dictionnary
 Ctrl+x Ctrl+k	Complete with dictionnary
 
-## MARKS
+### MARKS
 m {a-z}	Marks current position as {a-z}
 ' {a-z}	Move to position {a-z}
 ''	Move to previous position
 
-## ABBREVIATIONS
+### ABBREVIATIONS
 :ab mail mail@provider.org	Define mail as abbreviation of mail@provider.org
 
-## SYNTAX HIGHLIGHTING
+### SYNTAX HIGHLIGHTING
 :syntax on	Turn on syntax highlighting
 :syntax off	Turn off syntax highlighting
 :set syntax=perl	Force syntax highlighting
